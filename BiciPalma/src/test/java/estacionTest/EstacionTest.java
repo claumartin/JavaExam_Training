@@ -36,4 +36,11 @@ public class EstacionTest {
     public void anclajesLibresTest() {
         assertEquals(6, estacionTest.anclajesLibres());
     }
+
+    @Test
+    public void generarAnclajeTest() {
+
+        int posicionAnclaje = estacionTest.generarAnclaje();
+        assertTrue(6 > posicionAnclaje);
+    }
 }
