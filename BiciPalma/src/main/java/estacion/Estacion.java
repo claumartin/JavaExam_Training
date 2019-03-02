@@ -55,6 +55,10 @@ public class Estacion {
     }
 
     public int generarAnclaje() {
-        return (int) (Math.random() * this.numeroAnclajes) + 1;
+        int anclajeRandom = (int) (Math.random() * this.numeroAnclajes) + 1;
+        while (this.anclajes[anclajeRandom] != null) {
+            anclajeRandom = (int) (Math.random() * this.numeroAnclajes) + 1;
+        }
+        return anclajeRandom;
     }
 }
