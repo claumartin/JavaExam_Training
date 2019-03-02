@@ -4,4 +4,6 @@
    Se ha de mostrar:
     * id
     * direccion 
-    * anclaje
+    * anclajes
+
+2. Los usuarios podrán visualizar el número de anclajes disponibles.
