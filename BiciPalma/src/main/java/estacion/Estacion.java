@@ -1,5 +1,7 @@
 package estacion;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import bicicleta.Bicicleta;
 import tarjetaUsuario.TarjetaUsuario;
 
@@ -57,14 +59,14 @@ public class Estacion {
 
     public int generarAnclaje() {
         int anclajeRandom = (int) (Math.random() * (this.numeroAnclajes - 1)) + 1;
-        while (this.anclajes[anclajeRandom] != null) {
-            anclajeRandom = (int) (Math.random() * (this.numeroAnclajes - 1)) + 1;
-        }
         return anclajeRandom;
     }
 
     public void anclarBicicleta(Bicicleta idBicicleta) {
         int anclajeRandom = generarAnclaje();
+        while (this.anclajes[anclajeRandom] != null) {
+            anclajeRandom =  generarAnclaje();
+        }
         this.anclajes[anclajeRandom] = idBicicleta;
     }
 
@@ -83,5 +85,21 @@ public class Estacion {
 
     public boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario) {
         return tarjetaUsuario.getActivada();
+    }
+
+    public void retirarBicicleta(TarjetaUsuario tarjetaUsuario) {
+
+        if (leerTarjetaUsuario(tarjetaUsuario)) {
+
+            int anclajeGenerado = generarAnclaje();
+
+            while (this.anclajes[anclajeGenerado] == null) {
+                anclajeGenerado = generarAnclaje();
+            }
+            this.anclajes[anclajeGenerado] = null;
+        }
+        else { 
+            System.out.println("No puede retirar bicicleta, la tarjeta no está activada.");
+        }
     }
 }

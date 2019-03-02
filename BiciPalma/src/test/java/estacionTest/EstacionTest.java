@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import bicicleta.Bicicleta;
 import estacion.Estacion;
+import tarjetaUsuario.TarjetaUsuario;
 
 public class EstacionTest {
 
@@ -46,7 +47,7 @@ public class EstacionTest {
     }
 
     @Test
-    public void cosultarAnclajesTest() {
+    public void retirarBicicletaTest() {
 
         int[] bicicletas = {291, 292, 293, 294};
 
@@ -54,6 +55,9 @@ public class EstacionTest {
 			Bicicleta bicicleta = new Bicicleta(id);
 			estacionTest.anclarBicicleta(bicicleta);
         }
+        
+        TarjetaUsuario tarjetaUsuarioTest = new TarjetaUsuario("000455789", false);
+        estacionTest.retirarBicicleta(tarjetaUsuarioTest);
         
         assertEquals(2, estacionTest.anclajesLibres());
     }
