@@ -55,10 +55,15 @@ public class Estacion {
     }
 
     public int generarAnclaje() {
-        int anclajeRandom = (int) (Math.random() * this.numeroAnclajes) + 1;
+        int anclajeRandom = (int) (Math.random() * (this.numeroAnclajes - 1)) + 1;
         while (this.anclajes[anclajeRandom] != null) {
-            anclajeRandom = (int) (Math.random() * this.numeroAnclajes) + 1;
+            anclajeRandom = (int) (Math.random() * (this.numeroAnclajes) - 1) + 1;
         }
         return anclajeRandom;
+    }
+
+    public void anclarBicicleta(Bicicleta idBicicleta) {
+        int anclajeRandom = generarAnclaje();
+        this.anclajes[anclajeRandom] = idBicicleta;
     }
 }
