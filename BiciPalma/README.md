@@ -13,3 +13,7 @@
 4. Los usuarios podrán visualizar el estado de los anclajes.
     * Si hay una bicicleta, se mostrará la id de ésta.
     * En caso de que el anclaje esté libre, se mostrará un mensaje oportuno.
+
+5. Los usuarios podrán retirar las bicicletas de la estación.
+    * Tendrán que utilizar una Tarjeta de Usuario.
+    * Ha de verificarse que la tarjeta esté activada.
