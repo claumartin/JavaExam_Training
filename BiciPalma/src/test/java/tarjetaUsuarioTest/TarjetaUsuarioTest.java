@@ -23,4 +23,9 @@ public class TarjetaUsuarioTest {
     public void getIdTarjetaTest() {
         assertEquals("000456789", tarjetaUsuarioTest.getIdTarjeta());
     } 
+
+    @Test
+    public void getActivadaTest() {
+        assertEquals(true, tarjetaUsuarioTest.getActivada());
+    }
 }

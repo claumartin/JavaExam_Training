@@ -5,7 +5,7 @@ public class TarjetaUsuario {
     // Atributos
 
     private String idTarjeta = "";
-    private boolean activada;
+    private boolean activada = true;
 
     // Constructores
 
@@ -20,5 +20,9 @@ public class TarjetaUsuario {
 
     public String getIdTarjeta() {
         return this.idTarjeta;
+    }
+
+    public boolean getActivada() {
+        return this.activada;
     }
 }

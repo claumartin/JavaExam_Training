@@ -1,6 +1,7 @@
 package estacion;
 
 import bicicleta.Bicicleta;
+import tarjetaUsuario.TarjetaUsuario;
 
 public class Estacion {
 
@@ -78,5 +79,9 @@ public class Estacion {
             }
             posicion++;
         }
+    }
+
+    public boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario) {
+        return tarjetaUsuario.getActivada();
     }
 }
