@@ -66,4 +66,17 @@ public class Estacion {
         int anclajeRandom = generarAnclaje();
         this.anclajes[anclajeRandom] = idBicicleta;
     }
+
+    public void consultarAnclajes() {
+        int posicion = 0;
+        for (Bicicleta bicicleta : this.anclajes) {
+            if (bicicleta == null) {
+                System.out.println("\n" + "Anclaje " + posicion + ": libre");
+            }
+            else {
+                System.out.println("\n" + "Anclaje " + posicion + ": " + bicicleta.getIdBicicleta());
+            }
+            posicion++;
+        }
+    }
 }

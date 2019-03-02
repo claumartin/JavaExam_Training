@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import bicicleta.Bicicleta;
 import estacion.Estacion;
 
 public class EstacionTest {
@@ -42,5 +43,18 @@ public class EstacionTest {
 
         int posicionAnclaje = estacionTest.generarAnclaje();
         assertTrue(6 > posicionAnclaje);
+    }
+
+    @Test
+    public void cosultarAnclajesTest() {
+
+        int[] bicicletas = {291, 292, 293, 294};
+
+        for ( int id: bicicletas ){
+			Bicicleta bicicleta = new Bicicleta(id);
+			estacionTest.anclarBicicleta(bicicleta);
+        }
+        
+        assertEquals(2, estacionTest.anclajesLibres());
     }
 }
