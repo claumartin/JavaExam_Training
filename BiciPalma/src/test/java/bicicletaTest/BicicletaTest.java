@@ -10,7 +10,7 @@ import bicicleta.Bicicleta;
 
 public class BicicletaTest {
 
-    Bicicleta bicicletaTest = new Bicicleta(9);
+    private Bicicleta bicicletaTest = new Bicicleta(9);
 
     @Before
     public void init() {

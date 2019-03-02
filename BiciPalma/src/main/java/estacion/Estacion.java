@@ -6,10 +6,10 @@ public class Estacion {
 
     // Atributos
 
-    int idEstacion = 0;
-    String direccion = "";
-    int numeroAnclajes = 0;
-    Bicicleta[] anclajes;
+    private int idEstacion = 0;
+    private String direccion = "";
+    private int numeroAnclajes = 0;
+    private Bicicleta[] anclajes;
 
     // Constructor
 

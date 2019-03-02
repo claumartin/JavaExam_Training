@@ -9,7 +9,7 @@ import estacion.Estacion;
 
 public class EstacionTest {
 
-    Estacion estacionTest = new Estacion(1, "Manacor", 6);
+    private Estacion estacionTest = new Estacion(1, "Manacor", 6);
 
     @Before
     public void init() {

@@ -4,7 +4,7 @@ public class Bicicleta {
 
     // Atributos
 
-    int idBicicleta = 0;
+    private int idBicicleta = 0;
 
     // Constructores
 

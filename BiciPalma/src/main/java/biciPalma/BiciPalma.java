@@ -8,7 +8,7 @@ public class BiciPalma {
 
 	public static void main(String[] args) {
 		
-		Estacion estacion = new Estacion(1, "Manacor", 6);
+		private Estacion estacion = new Estacion(1, "Manacor", 6);
 		
 		/* caso TEST visualizar estado de la estacion 
 		 * muestra id, direccion, anclaje
