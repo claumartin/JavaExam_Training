@@ -31,4 +31,9 @@ public class EstacionTest {
     public void getAnclajesTest() {
         assertEquals(6, estacionTest.getNumeroAnclajes());
     }
+
+    @Test
+    public void anclajesLibresTest() {
+        assertEquals(6, estacionTest.anclajesLibres());
+    }
 }
