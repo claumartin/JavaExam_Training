@@ -47,7 +47,7 @@ public class BiciPalma {
 		
 		System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
 		
-		// estacion.consultarAnclajes();
+		estacion.consultarAnclajes();
 		
 		// /* caso TEST retirar bicicleta */
 		
